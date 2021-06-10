@@ -1,1 +1,343 @@
+<!DOCTYPE html>
 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            /* CSS Variables */
+:root {
+  --primary: #ddd;
+  --dark: rgb(46, 46, 78);
+  --light: #fff;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+}
+
+body {
+  background: #ccc;
+  margin: 30px 50px;
+  line-height: 1.4;
+}
+
+.btn {
+  background: var(--dark);
+  color: var(--light);
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+}
+
+/* Navigation */
+.main-nav ul {
+  display: grid;
+  grid-gap: 20px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.main-nav a {
+  background: var(--primary);
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: var(--dark);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.main-nav a:hover {
+  background: var(--dark);
+  color: var(--light);
+}
+
+/* Top Container */
+.top-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    'showcase showcase top-box-a'
+    'showcase showcase top-box-b';
+}
+
+/* Showcase */
+.showcase {
+  grid-area: showcase;
+  min-height: 400px;
+  background: url(images/painter.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+
+.showcase h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+  color: var(--light);
+}
+
+.showcase p {
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: var(--light);
+}
+
+/* Top Box */
+.top-box {
+  background: var(--primary);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.top-box .price {
+  font-size: 2.5rem;
+}
+
+.top-box-a {
+  grid-area: top-box-a;
+}
+
+.top-box-b {
+  grid-area: top-box-b;
+}
+
+/* Boxes */
+.boxes {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.box {
+  background: var(--primary);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow);
+}
+
+/* Info */
+.info {
+  background: var(--primary);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3rem;
+}
+
+/* Portfolio */
+.portfolio {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.portfolio img {
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  background: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 700px) {
+  .top-container {
+    grid-template-areas:
+      'showcase showcase'
+      'top-box-a top-box-b';
+  }
+
+  .showcase h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-nav ul {
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  .info .btn {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .top-container {
+    grid-template-areas:
+      'showcase'
+      'top-box-a'
+      'top-box-b';
+  }
+}
+
+        </style>
+    </head>
+    <body>
+        
+        
+        <div class="wrapper">
+            <!-- Navigation -->
+            <nav class="main-nav">
+              <ul>
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">About</a>
+                </li>
+                <li>
+                  <a href="#">Services</a>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+              </ul>
+            </nav>
+        y
+            <!-- Top Container -->
+            <section class="top-container">
+              <header class="showcase">
+                <h1 style="color: black;font-size:50px;">We are urgently looking for talented artists/painters!
+
+                </h1>
+                <p style="color: rgb(46, 46, 78);">If you are one, we can pay you up to N1million per month!</p>
+                <a href="#" class="btn">Read More</a>
+              </header>
+              <div class="top-box top-box-a">
+                <h4>What exactly are we looking for?</h4>
+                <h4 style="text-align: justify;">We are looking for talented artists/painters. You need to be very good at what you do. It does not matter whether you went to art school or not; you need to be an experienced painter and you are able to show us a collection of paintings you have created, whatever the style. You need to be able to complete a medium size painting in less than three hours.</h4>
+                
+              </div>
+              <div class="top-box top-box-b">
+                <p style="color:rgb(46, 46, 78);">If you are not an artist/painter yourself, but know someone talented who is, please give them this site URL. </p>
+                <a href="" class="btn">yoursite.com</a>
+                <p>If they apply and get hired, you will be given a N40,000 reward! All you need to do is ask them to enter your email address in the "were you recommended by someone" field from the application </p>
+              </div>
+            </section>
+        
+            <!-- Boxes Section -->
+            <section class="boxes">
+              <div class="box">
+                <i class="fas fa-chart-pie fa-4x"></i>
+                <h3>What is the job?</h3>
+                <p>This is unlike any other job on a planet!
+                    The best way to explain what the job requires is to show you existing YouTube channels that we are looking to emulate.
+                </p>
+                <p>Make money helping us find talented artists/painters. </p>
+              </div>
+              <div class="box">
+                <i class="fas fa-globe fa-4x"></i>
+                <h3>What is the project?</h3>
+                <p>We’re starting an Art YouTube channel. It’s an ambitious and incredibly rewarding mission that we will be dedicated to achieving.
+
+                    To create a brilliant channel that can bring people together in the real world would be no easy feat, which is why we need you! With your talent, nothing would be out of reach. 
+                    </p>
+              </div>
+              <div class="box">
+                <i class="fas fa-cog fa-4x"></i>
+                <h3>What is the job?</h3>
+                <p>The best way to explain what the job requires is to show you existing YouTube channels that we are looking to emulate.
+
+                    We’d like to ask you to take some time to watch these three YouTube channel videos: WoW Art, Serena Art and Chloe Art.
+                    </p>
+              </div>
+              <div class="box">
+                <i class="fas fa-users fa-4x"></i>
+                <h3>What exactly are we looking for?</h3>
+                <p>We are looking for talented artists/painters. You need to be very good at what you do. It does not matter whether you went to art school or not; you need to be an experienced painter and you are able to show us a collection of paintings you have created, whatever the style. You need to be able to complete a medium size painting in less than three hours. </p>
+              </div>
+            </section>
+        
+            <!-- Info Section -->
+            <section class="info">
+              <img src="images/painter2.jpg" alt="">
+              <div>
+                <h2>Why are we looking for African artists?</h2>
+                <p> 
+
+                    Africa is a diverse continent full of fascinating cultures, stunningly beautiful scenery, and extraordinary animals. Africa has wonderfully unique landscapes, tropical beaches, ancient history, geographical wonders and vibrant cities.
+                    
+                    From the world’s highest sand dunes in the Namib desert to the Victoria Falls in Zambia to the natural landmarks, wildlife reserves and 
+                    jaw-droppingly beautiful landscapes of Nigeria, Africa offers an immense array of inspirations for any artist in the world. We believe an artist from Africa would be well-suited to draw from those inspirations.
+                    
+                    
+                    
+                    
+                    
+                    
+                                   
+                    
+                    
+                    
+                    
+                    </p>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </section>
+        
+            <!-- Portfolio -->
+            <section class="portfolio">
+              <img src="https://source.unsplash.com/random/200x200" alt="">
+              <img src="https://source.unsplash.com/random/201x200" alt="">
+              <img src="https://source.unsplash.com/random/202x200" alt="">
+              <img src="https://source.unsplash.com/random/203x200" alt="">
+              <img src="https://source.unsplash.com/random/204x200" alt="">
+              <img src="https://source.unsplash.com/random/205x200" alt="">
+              <img src="https://source.unsplash.com/random/206x200" alt="">
+              <img src="https://source.unsplash.com/random/207x200" alt="">
+              <img src="https://source.unsplash.com/random/208x200" alt="">
+              <img src="https://source.unsplash.com/random/209x200" alt="">
+            </section>
+        
+            <!-- Footer -->
+            <footer>
+              <p>GridBiz &copy; 2018</p>
+            </footer>
+        
+          </div>
+          <!-- Wrapper Ends -->
+        
+        <script src="" async defer></script>
+    </body>
+</html>
